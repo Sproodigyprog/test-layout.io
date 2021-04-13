@@ -1,0 +1,26 @@
+// main: style.scss
+
+.title-h1 {
+  // font-size: ;
+  @media (max-width: 767.98px) {
+    // font-size: ;
+  }
+}
+.title-h2 {
+  font-family: raleway-semibold;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #555555;
+  @media (max-width: 767.98px) {
+    // font-size: ;
+  }
+}
+.title-h3 {
+  font-family: raleway-medium;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #c7b299;
+  @media (max-width: 767.98px) {
+    // font-size: ;
+  }
+}

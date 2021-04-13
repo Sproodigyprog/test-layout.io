@@ -1,0 +1,192 @@
+// compileCompressed: nav.css
+
+@import '../../assets/scss/mixins';
+
+.nav {
+  position: relative;
+  z-index: 1000;
+  &__list {
+    @include flexbox();
+    @include box-sizing();
+    list-style: none;
+    padding: 0;
+  }
+  &__item {
+    text-align: center;
+    position: relative;
+    margin: 0 15px 0 0;
+    @include flex-default-center();
+    &:last-child {
+      margin: 0;
+      &::after {
+        content: none;
+      }
+    }
+    &_parent {
+      position: relative;
+      &:hover {
+        & > .nav__sublist {
+          display: block;
+        }
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    @include transition((color));
+    &:hover {
+      color: lighten(#000, 40%);
+    }
+  }
+  &__arrow {
+    display: block;
+    height: 100%;
+    width: 14px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    cursor: pointer;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 10px;
+      background: #000;
+      top: 0;
+      @include transition((transform));
+    }
+    &::before {
+      right: 9px;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      right: 3px;
+      transform: rotate(45deg);
+    }
+    &_active {
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__sublist {
+    position: absolute;
+    display: none;
+    list-style: none;
+    padding: 5px;
+    width: max-content;
+    top: 20px;
+    left: 0;
+    z-index: 1001;
+    text-align: left;
+    border: 1px solid black;
+  }
+  &__subitem {
+    padding: 5px 0;
+  }
+  &__sublink {
+    color: inherit;
+    text-decoration: none;
+    @include transition((color));
+    @include box-sizing();
+    display: block;
+    width: 100%;
+    &:hover {
+      color: lighten(#000, 40%);
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    @include transition(transform);
+    transform: translateY(-100%);
+    // width: 100%;
+    &_active {
+      transform: translateY(0);
+    }
+    &__list {
+      display: flex;
+      @include flex-dir-col();
+      @include box-sizing();
+      padding: 10px;
+      background: lightblue;
+    }
+    &__item {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      text-align: left;
+      padding: 5px 0;
+      &_parent {
+        padding: 0;
+      }
+    }
+    &__sublist {
+      position: relative;
+      border: 1px solid #0DACCE;
+      color: #fff;
+      width: 100%;
+      margin: 10px 0 5px 0;
+      @include box-sizing();
+      top: 0;
+      left: 0;
+      padding: 0;
+    }
+    &__subitem {
+      padding: 0;
+    }
+    &__sublink {
+      padding: 5px 10px;
+      background: darken(#0dacce, 20%);
+      @include transition((color, background-color));
+      &:hover {
+        color: darken(#fff, 10%);
+        background: darken(#0dacce, 30%);
+      }
+    }
+  }
+}
+.burger {
+  width: 30px;
+  height: 25px;
+  display: none;
+  position: relative;
+  cursor: pointer;
+  z-index: 1100;
+  &__item {
+    transition: transform .3s;
+    width: 100%;
+    height: 2px;
+    background: #333;
+  }
+  &:hover .burger__item {
+    background: #666;
+  }
+  &_active .burger__item {
+    position: absolute;
+    &:nth-of-type(1) {
+      transform: rotate(45deg);
+      top: 11px;
+    }
+    &:nth-of-type(2) {
+      display: none;
+    }
+    &:nth-of-type(3) {
+      transform: rotate(-45deg);
+      top: 11px;
+    }
+  }
+
+  @media screen and (max-width: 767.98px) {
+    @include flex-default-center(space-between, center, column);
+  }
+}

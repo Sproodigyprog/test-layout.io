@@ -1,0 +1,79 @@
+// compileExpanded: ../css/style.css
+
+@import 'normalize.scss';
+@import '_variables';
+@import '_mixins';
+@import '_fonts';
+@import '_common';
+@import '_headers_and_txt';
+@import '_buttons';
+@import '_main-nav';
+@import '_scroll-up-btn';
+@import '_miscellaneous';
+@import '_main-window';
+@import '_features';
+@import '_counters';
+@import '_ideas';
+@import '_aside';
+@import '_projects';
+@import '_mobile';
+@import '_partners';
+@import '_header';
+@import '_footer';
+
+// Styles ----------------------------------------------------------------------
+
+.test {
+  &__row {
+    height: 300px;
+    @include flex-default-center();
+    // background: #555;
+    color: #555;
+    padding: 0 15px;
+  }
+  &__col {
+    @include box-sizing();
+    border: 2px solid $primary-color;
+    height: 100%;
+    &:nth-child(1) {
+      @include flex-item(0, 0, 150px);
+      padding: 30px;
+    }
+    &:nth-child(2) {
+      @include flex-item(0, 1, 600px);
+      padding: 30px 20px;
+    }
+    &:nth-child(3) {
+      @include flex-item(0, 1, auto);
+    }
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.pluses {
+  padding: 30px 0;
+  &__row {
+    margin: 0 -50px;
+    @include flex-default-center(space-between, center);
+  }
+  &__item {
+    margin: 0 50px;
+    text-align: center;
+  }
+}
+// .icon-block {
+//   @include box-sizing();
+//   @include flex-default-center(flex-start, flex-start, column)
+//   &__icon {
+//     height: 30px;
+//     align-self: center;
+//     margin: 0 0 10px 0;
+//   }
+//   &__par {
+//
+//   }
+// }

@@ -1,0 +1,124 @@
+// main: style.scss
+
+.projects {
+  padding: 80px calc(50% - (#{$container-full-width} / 2 + #{$container-padding}));
+  @include flex-default-center();
+  flex-wrap: wrap;
+  &__title {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 24px 0;
+  }
+  &__par {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 0 40px 0;
+    color: #8c8c8c;
+  }
+  &__nav {
+    margin: 0 0 40px 0;
+  }
+  &__nav-btn {
+    margin: 0 10px 0 0;
+    width: fit-content;
+    width: -moz-fit-content;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__gallery {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 40px 0;
+  }
+  &__item {
+    position: relative;
+    &-img {
+      display: block;
+    }
+    &-descr {
+      position: relative;
+      @include box-sizing();
+      padding: 26px;
+      background-color: #fbfaf8;
+      @include transition((background-color, color));
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 19px;
+        top: -20px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid #fbfaf8;
+        @include transition((border-color));
+      }
+    }
+    &-title {
+      margin: 0 0 4px 0;
+    }
+    &-text {
+      font-size: 14px;
+      line-height: 20px;
+      color: #d1d1d1;
+      display: block;
+    }
+    &-btn {
+      position: absolute;
+      top: 106px;
+      outline: none;
+      border: none;
+      width: 26px;
+      height: 26px;
+      background: transparent;
+      cursor: pointer;
+      display: none;
+      @include transition((filter));
+      &_link {
+        left: 144px;
+        background: url(../img/icons/icon-chain-cell.png) no-repeat center/contain;
+      }
+      &_search {
+        background: url(../img/icons/icon_lupa.png) no-repeat center/contain;
+        right: 144px;
+      }
+      &:hover {
+        filter: brightness(70%);
+      }
+      &:active {
+        @include transition((none));
+        filter: brightness(50%);
+      }
+    }
+    &:hover &-descr {
+      background: #362f2d;
+    }
+    &:hover &-descr::before {
+      border-bottom: 10px solid #362f2d;
+    }
+    &:hover &-title {
+      color: #fff;
+    }
+    &:hover &-text {
+      color: #c7b299;
+    }
+    &:hover &-btn {
+      display: block;
+    }
+  }
+  &__btn {
+    @include transition((color, background-color));
+    &:hover {
+      color: #998675;
+      border: 1px solid #998675;
+    }
+    &:active {
+      @include transition((none));
+      border: 1px solid #ded73b;
+      background: darken(#ded73b, 80%);
+      color: #ded73b;
+    }
+  }
+}

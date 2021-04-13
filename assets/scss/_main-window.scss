@@ -1,0 +1,216 @@
+// main: style.scss
+
+.main-window {
+  background: #434240 url(../img/main-bg.jpg) no-repeat center/cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 40px 150px;
+  @include box-sizing();
+  @include flex-default-center();
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.logo-link {
+  @include flex-default-center(space-between, center);
+  width: 185px;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 219px 0 0;
+  @include transition((color));
+  &:hover {
+    color: #c7b299;
+    & .logo-link__icon {
+      fill: #c7b299;
+    }
+  }
+  &:active {
+    color: #ded73b;
+    & .logo-link__icon {
+      fill: #ded73b;
+    }
+  }
+  &__icon {
+    @include transition((fill));
+    fill: #fff;
+  }
+  &__txt {
+    font-family: raleway, sans-serif;
+    font-size: 34px;
+    line-height: 1.2;
+  }
+}
+.cart {
+  display: block;
+  width: 18px;
+  height: 24px;
+  margin: 0 28px 0 0;
+  border: none;
+  outline: none;
+  @include transition((fill));
+  &__icon {
+    fill: #fff;
+    &:hover {
+      fill: #c7b299;
+    }
+    &:active {
+      fill: #ded73b;
+    }
+  }
+}
+.search-form {
+  position: relative;
+  &__label {
+    display: block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    &:hover {
+      fill: #c7b299;
+    }
+  }
+  &__search {
+    font-family: montserrat, sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    left: -180px;
+    bottom: -40px;
+    width: 0;
+    opacity: 0;
+    position: absolute;
+    border: none;
+    outline: none;
+    padding: 5px;
+    @include box-sizing();
+    @include transition((width, opacity));
+    &:focus {
+      display: block;
+      opacity: 1;
+      width: 200px;
+      border: 1px solid #fff;
+      & ~ .search-form__label > .search-form__icon {
+        fill: #ded73b;
+      }
+    }
+  }
+}
+.carousel {
+  width: 100%;
+  @include flex-default-center(space-between, center);
+  flex-wrap: wrap;
+  &__btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: none;
+    border-top: 1px solid #fff;
+    opacity: .5;
+    cursor: pointer;
+    @include transition((border, opacity));
+    &_prev {
+      border-left: 1px solid #fff;
+      @include transform(rotate(-45deg));
+    }
+    &_next {
+      border-right: 1px solid #fff;
+      @include transform(rotate(45deg));
+    }
+    &:hover {
+      opacity: 1;
+      border-top: 1px solid #d3c1ad;
+    }
+    &_prev:hover {
+      border-left: 1px solid #d3c1ad;
+    }
+    &_next:hover {
+      border-right: 1px solid #d3c1ad;
+    }
+    &:active {
+      opacity: 1;
+      border-top: 1px solid #ded73b;
+      @include transition((none));
+    }
+    &_prev:active {
+      border-left: 1px solid #ded73b;
+    }
+    &_next:active {
+      border-right: 1px solid #ded73b;
+    }
+  }
+  &__body {
+    text-align: center;
+    max-width: 665px;
+  }
+  &__text {
+    font-family: raleway-medium;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 0 0 14px 0;
+  }
+  &__title {
+    font-family: raleway-semibold;
+    font-size: 52px;
+    line-height: 1.2;
+    margin: 0 0 19px 0;
+  }
+  &__par {
+    margin: 0 0 52px 0;
+  }
+  &__start {
+  }
+}
+.carousel-pagination {
+  width: 100%;
+  @include flex-default-center();
+  &__item {
+    display: block;
+    margin: 0 10px 0 0;
+    width: 11px;
+    height: 11px;
+    opacity: 0.5;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: #fff;
+    @include transition((background-color, transform, border));
+    &_active {
+      transform: scale(1.2);
+      background: transparent;
+      border: 2px solid #d3c1ad;
+    }
+    &:last-child {
+      margin: 0;
+    }
+    &:hover {
+      transform: scale(1.2);
+      background: transparent;
+      border: 2px solid #d3c1ad;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

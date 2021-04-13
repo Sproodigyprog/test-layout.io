@@ -1,0 +1,12 @@
+// main: style.scss
+
+  .partners {
+    padding: 181px calc(50% - 560px);
+    @include flex-default-center(space-between, center);
+    flex-wrap: wrap;
+    background: #ccc url(../img/partners_bg.jpg) no-repeat center/cover;
+    &__img {
+      padding: 15px;
+      @include box-sizing();
+    }
+  }

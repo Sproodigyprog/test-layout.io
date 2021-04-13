@@ -1,0 +1,30 @@
+// main: style.scss
+
+.purchase {
+  padding: 49px calc(50% - (#{$container-full-width} / 2 + #{$container-padding}));
+  @include flex-default-center(space-between, center);
+  background-color: #f4f5f8;
+  background-image: -webkit-linear-gradient(bottom, #211b19 0%, #4e3427 100%);
+  background-image: -o-linear-gradient(bottom, #211b19 0%, #4e3427 100%);
+  background-image: linear-gradient(to top, #211b19 0%, #4e3427 100%);
+  &__descr {
+    font-family: raleway;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  &__descr-title {
+    display: block;
+    margin: 0 0 8px 0;
+  }
+  &__descr-name {
+    color: #c7b299;
+  }
+  &__descr-par {
+    font-family: montserrat-light;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #615855;
+  }
+  &__btn {
+  }
+}

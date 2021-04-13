@@ -1,0 +1,50 @@
+// main: style.scss
+
+.btn {
+  font-family: 'raleway-extrabold';
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 170px;
+  height: 50px;
+  background: #998675;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include transition((color, background-color, border));
+  &:hover {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+  }
+  &:active {
+    @include transition((none));
+    border: 1px solid #ded73b;
+    background: darken(#ded73b, 80%);
+    color: #ded73b;
+  }
+  &_white {
+    font-family: 'montserrat-light';
+    background-color: rgba(17,17,17,0.0);
+    border: 1px solid #ebebeb;
+    color: #8c8c8c;
+    @include transition((color, background-color, border));
+    text-transform: capitalize;
+    padding: 8px 20px;
+    @include box-sizing();
+    height: auto;
+    line-height: 1;
+    &:hover {
+      background: #998675;
+      color: #fff;
+    }
+    &:active {
+      @include transition((none));
+      background: #000;
+      color: #ded73b;
+    }
+  }
+}

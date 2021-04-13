@@ -1,0 +1,40 @@
+// !compileOnSave
+
+// Hints -----------------------------------------------------------------------
+
+// Font weight ***********************************
+
+// 100 Thin (Hairline)
+// 200 Extra Light (Ultra Light)
+// 300 Light
+// 400 Normal
+// 500 Medium
+// 600 Semi Bold (Demi Bold)
+// 700 Bold
+// 800 Extra Bold (Ultra Bold)
+// 900 Black (Heavy)
+
+// Input arrows **********************************
+
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+// }
+//
+// input[type='number'] {
+//   -moz-appearance: textfield;
+// }
+// input[type="number"]:hover,
+// input[type="number"]:focus {
+//   -moz-appearance: number-input;
+// }
+
+// Scrollbar *************************************
+
+// ::-webkit-scrollbar              { /* 1 - скроллбар */ }
+// ::-webkit-scrollbar-button       { /* 2 - кнопка */ }
+// ::-webkit-scrollbar-track        { /* 3 - трек */ }
+// ::-webkit-scrollbar-track-piece  { /* 4 - видимая часть трека */ }
+// ::-webkit-scrollbar-thumb        { /* 5 - ползунок */ }
+// ::-webkit-scrollbar-corner       { /* 6 - уголок */ }
+// ::-webkit-resizer                { /* 7 - изменение размеров */ }

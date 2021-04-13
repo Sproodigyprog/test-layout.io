@@ -1,0 +1,50 @@
+// compileCompressed: checkbox.css
+
+@import '../../assets/scss/mixins';
+
+.input-wrp {
+  margin: 0 0 30px 0;
+  @include flex-default-center(flex-start);
+}
+.input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  margin: 0 10px 0 0;
+  outline: 1px solid red;
+  cursor: pointer;
+  @include box-sizing();
+  @include transition((background-color));
+}
+.input[type=checkbox]:checked {
+  background: green;
+}
+.checkbox {
+}
+
+.label {
+  margin: 0 30px 0 0;
+}
+
+.radio {
+  position: relative;
+  outline: none;
+  border: 1px solid red;
+  border-radius: 50%;
+  @include flex-default-center();
+}
+.radio::after {
+  content: '';
+  @include transition((background-color));
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  display: block;
+  border-radius: 50%;
+}
+.radio:checked::after {
+  background: green;
+}

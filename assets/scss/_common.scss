@@ -1,0 +1,38 @@
+// main: style.scss
+
+// Common styles ---------------------------------------------------------------
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'montserrat-light', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  color: #fff;
+}
+.wrapper {
+  min-height: 100%;
+
+  // Display flex negatively affects horizontal scrolling of elements during overflow
+  // @include flexbox();
+  // @include flex-dir-col();
+
+  // Footer always at the bottom on "grids"
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.container {
+  margin: auto;
+  padding: 0 $container-padding;
+  max-width: $container-width + ($container-padding * 2);
+}
+.container-2 {
+  padding: 0 calc(50% - (#{$container-full-width} / 2 + #{$container-padding}));
+}
+.side-padding {
+  padding: 0 $container-padding;
+}

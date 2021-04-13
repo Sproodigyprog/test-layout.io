@@ -1,0 +1,107 @@
+// main: style.scss
+
+// Mixins ----------------------------------------------------------------------
+
+@mixin font-face($name, $path, $weight: normal, $style: normal, $display: swap) {
+  @font-face {
+    font-family: quote($name);
+    src: url($path+".eot");
+    src: url($path+".eot?#iefix") format("embedded-opentype"),
+         url($path+".woff") format("woff"),
+         url($path+".woff2") format("woff2"),
+         url($path+".ttf") format("truetype"),
+         url($path+".svg##{$name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: $display;
+  }
+}
+
+@mixin dynamic-font($min-size, $max-size, $line-height: 1.2, $layout-width: 1920) {
+  $size-delta: $max-size - $min-size;
+  font-size: calc(#{$min-size + 'px'} + #{$size-delta} * (100vw / #{$layout-width}));
+  line-height: $line-height;
+  @media screen and (max-width: 767.98px) {
+    font-size: calc(#{$min-size + 'px'} + (#{$size-delta} + #{$size-delta} * 0.7) * ((100vw - 320px) / #{$layout-width}));
+  }
+}
+
+@mixin transition($props: list($list), $dur: .3s, $func: ease, $res: null) {
+  @each $prop in $props {
+    $item: #{$prop} $dur $func;
+    $res: append($res, $item, $separator: comma);
+  }
+  -webkit-transition: #{$res};
+  -moz-transition: #{$res};
+  -o-transition: #{$res};
+  transition: #{$res};
+}
+
+@mixin transform($type) {
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -ms-transform: $type;
+  -o-transform: $type;
+  transform: $type;
+}
+@mixin flexbox($wrap: nowrap) {
+  -webkit-display: flex;
+  display: flex;
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-default-center($justify: center, $align: center, $dir: row) {
+  -webkit-display: flex;
+  display: flex;
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  justify-content: $justify;
+  -webkit-align-items: $align;
+  align-items: $align;
+  -webkit-flex-direction: $dir;
+  -moz-flex-direction: $dir;
+  flex-direction: $dir;
+}
+
+@mixin flex-item($grow, $shrink, $percents) {
+  -webkit-flex: $grow $shrink $percents;
+  -moz-flex: $grow $shrink $percents;
+  -ms-flex: $grow $shrink $percents;
+  flex: $grow $shrink $percents;
+}
+
+@mixin flex-dir-col($dir: column) {
+  -webkit-flex-direction: $dir;
+  -ms-flex-direction: $dir;
+  flex-direction: $dir;
+}
+
+@mixin order($order) {
+  -webkit-order: $order;
+  -moz-order: $order;
+  order: $order;
+}
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+
+@mixin box-shadow($hoff, $voff, $blur, $spread, $color) {
+  -webkit-box-shadow: $hoff, $voff, $blur, $spread, $color;
+  -moz-box-shadow: $hoff, $voff, $blur, $spread, $color;
+  box-shadow: $hoff, $voff, $blur, $spread, $color;
+}
+
+@mixin box-dec-break($break: slice) {
+  -webkit-box-decoration-break: $break;
+  -o-box-decoration-break: $break;
+  box-decoration-break: $break;
+}
+
+@mixin filter($filter) {
+  -webkit-filter: $filter;
+  filter: $filter;
+}

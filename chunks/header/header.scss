@@ -1,0 +1,14 @@
+// compileCompressed: header.css
+
+@import '../../assets/scss/mixins';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  &__row {
+    @include flex-default-center(space-between, center, row);
+  }
+}

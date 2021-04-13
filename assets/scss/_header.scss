@@ -1,0 +1,8 @@
+// main: style.scss
+
+.header {
+  // @include box-sizing();
+  @include flex-default-center();
+  // margin: 0 0 285px 0;
+  // padding: 0 $container-padding;
+}

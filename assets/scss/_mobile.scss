@@ -1,0 +1,43 @@
+// main: style.scss
+
+.mobile {
+  background: #fbfaf8 url(../img/iphone_in_hand.png) no-repeat 423px bottom/423px 616px;
+  padding: 79px calc(50% - (#{$container-full-width} / 2 + #{$container-padding})) 183px;
+  @include flex-default-center(flex-end, flex-start);
+  &__descr {
+    padding: 115px 0 0 0;
+    @include flex-item(0, 1, 660px);
+  }
+  &__title {
+    margin: 0 0 40px 0;
+  }
+  &__par {
+    color: #8c8c8c;
+    margin: 0 0 45px 0;
+  }
+  &__list {
+    line-height: 32px;
+    color: #8c8c8c;
+    list-style: none;
+    padding: 0;
+  }
+  &__list-item {
+    padding: 0 0 0 100px;
+    position: relative;
+    &::before {
+      width: 21px;
+      height: 21px;
+      font-size: 20px;
+      background: #c7b299;
+      color: #fff;
+      position: absolute;
+      left: 53px;
+      top: 5px;
+      content: '>';
+      border-radius: 50%;
+      display: block;
+      line-height: 23px;
+      text-align: center;
+    }
+  }
+}

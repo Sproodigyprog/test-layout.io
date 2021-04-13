@@ -1,0 +1,17 @@
+// main: style.scss
+
+// Fonts -----------------------------------------------------------------------
+
+// Raleway *****
+
+@include font-face('raleway', '../fonts/raleway/raleway-400-regular-lc', 400);
+@include font-face('raleway-medium', '../fonts/raleway/raleway-500-medium-lc', 500);
+@include font-face('raleway-semibold', '../fonts/raleway/raleway-600-semibold-lc', 600);
+@include font-face('raleway-bold', '../fonts/raleway/raleway-700-bold-lc', 700);
+@include font-face('raleway-extrabold', '../fonts/raleway/raleway-800-extrabold-lc', 800);
+
+// Montserrat *****
+
+@include font-face('montserrat-extralight', '../fonts/montserrat/montserrat-200-extralight-lc', 200);
+@include font-face('montserrat-light', '../fonts/montserrat/montserrat-300-light-lc', 300);
+@include font-face('montserrat', '../fonts/montserrat/montserrat-400-regular-lc', 400);

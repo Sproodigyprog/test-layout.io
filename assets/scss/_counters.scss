@@ -1,0 +1,87 @@
+// main: style.scss
+
+.counters {
+  @include flex-default-center(space-between, center);
+  padding: 70px calc(50% - 460px) 60px;
+  background-color: #f4f5f8;
+  background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
+  &__item {
+    position: relative;
+    @include flex-default-center(center, center, column);
+    padding: 0 0 30px 0;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      width: 30px;
+      background: #fff;
+    }
+  }
+  &__item-icon {
+    margin: 0 0 30px 0;
+    fill: #c7b299;
+    display: block;
+  }
+  &__item-num {
+    font-family: 'montserrat-extralight';
+    font-size: 48px;
+    line-height: 36px;
+    margin: 0 0 20px 0;
+  }
+  &__item-title {
+    display: block;
+    font-family: montserrat-light;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #c7b299;
+  }
+}
+.icon-block {
+  position: relative;
+  margin: 0 17px;
+  padding: 0 5px;
+  @include box-sizing();
+  @include flex-default-center(flex-start, center, column);
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: -30px;
+    width: 70px;
+    height: 3px;
+    background: #f1eee9;
+    @include transition((background-color));
+  }
+  &:hover &__title {
+    color: #c7b299;
+  }
+  &:hover &__icon {
+    fill: #c7b299;
+  }
+  &:hover::after {
+    background: #c7b299;
+  }
+  &__icon {
+    @include transition((fill));
+    margin: 0 0 29px 0;
+    fill: #555;
+    height: 49px;
+  }
+  &__title {
+    @include transition((color));
+    display: block;
+    font-family: raleway-semibold;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #555555;
+    margin: 0 0 19px 0;
+  }
+  &__par {
+    text-align: center;
+    font-size: 14px;
+    color: #8c8c8c;
+  }
+}
