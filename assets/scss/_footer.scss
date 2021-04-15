@@ -1,1 +1,239 @@
 // main: style.scss
+
+.footer {
+  &__data {
+    padding: 94px calc(50% - (#{$container-full-width} / 2 + #{$container-padding})) 81px;
+    background: #191919;
+    border-bottom: 1px solid #555;
+    @include flex-default-center(space-between, flex-start);
+  }
+  &__about {
+    flex: 0 1 263px;
+  }
+  &__about-logo {
+    margin: 0 0 29px 0;
+  }
+  &__about-par {
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+    margin: 0 0 33px 0;
+  }
+  &__about-link {
+    position: relative;
+    font-family: montserrat;
+    font-size: 14px;
+    line-height: 20px;
+    color: #d1d1d1;
+    text-decoration: none;
+    text-transform: capitalize;
+    @include transition((color));
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 3px;
+      right: -19px;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 5px solid #d1d1d1;
+      border-right: 5px solid transparent;
+      @include transition((border));
+    }
+    &:hover {
+      color: #7e7e7e;
+      &::after {
+        border-left: 5px solid #7e7e7e;
+      }
+    }
+    &:active {
+      color: #f9f038;
+      &::after {
+        @include transition((none));
+        border-left: 5px solid #f9f038;
+      }
+    }
+  }
+}
+.posts {
+  flex: 0 1 258px;
+  &__title {
+    font-family: 'raleway-bold';
+    font-size: 24px;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0 0 33px 0;
+    text-transform: capitalize;
+    display: block;
+  }
+  &__item {
+    margin: 0 0 19px 0;
+    padding: 0 0 21px 0;
+    border-bottom: 1px solid #252525;
+    text-decoration: none;
+    display: block;
+    &:last-child {
+      margin: 0;
+      border-bottom: none;
+    }
+    &:hover .posts__date{
+      color: #fff;
+    }
+    &:hover .posts__par{
+      color: #c7b299;
+    }
+    &:active .posts__date {
+      color: #ccc;
+      @include transition((none));
+    }
+    &:active .posts__par {
+      color: #f9f038;
+      @include transition((none));
+    }
+  }
+  &__date {
+    font-size: 12px;
+    line-height: 20px;
+    color: #363636;
+    @include transition((color));
+  }
+  &__par {
+    font-size: 14px;
+    line-height: 20px;
+    color: #555;
+    @include transition((color));
+  }
+}
+.twitter {
+  flex: 0 1 267px;
+  &__title {
+    font-family: 'raleway-bold';
+    font-size: 24px;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0 0 30px 0;
+    text-transform: capitalize;
+    display: block;
+  }
+  &__item {
+    margin: 0 0 19px 0;
+    padding: 0 0 21px 0;
+    border-bottom: 1px solid #252525;
+    text-decoration: none;
+    display: block;
+    &:last-child {
+      margin: 0;
+      border-bottom: none;
+    }
+    &:hover .twitter__date {
+      color: #fff;
+    }
+    &:hover .twitter__par {
+      color: #c7b299;
+    }
+    &:active .twitter__date {
+      color: #ccc;
+      @include transition((none));
+    }
+    &:active .twitter__par {
+      color: #f9f038;
+      @include transition((none));
+    }
+  }
+  &__par {
+    font-size: 14px;
+    line-height: 20px;
+    color: #555;
+    margin: 0 0 3px 0;
+    @include transition((color));
+  }
+  &__date {
+    font-size: 12px;
+    line-height: 20px;
+    color: #363636;
+    display: block;
+    @include transition((color));
+  }
+}
+.dribbble {
+  flex: 0 1 271px;
+  &__title {
+    font-family: 'raleway-bold';
+    font-size: 24px;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0 0 25px 0;
+    text-transform: capitalize;
+    display: block;
+  }
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  &__gallery-link {
+    @include transition((filter));
+    &:hover {
+      filter: brightness(70%);
+    }
+  }
+  &__gallery-img {
+  }
+}
+
+.add-nav {
+  background-color: #111111;
+  padding: 45px  calc(50% - (#{$container-full-width} / 2 + #{$container-padding})) 52px;
+  @include flex-default-center(space-between, center);
+  &__list {
+    @include flex-default-center();
+    list-style: none;
+    padding: 0;
+  }
+  &__list-item {
+    position: relative;
+    margin: 0 25px 0 0;
+    &:last-child {
+      margin: 0;
+      &::after {
+        content: none;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 1px;
+      top: 0;
+      right: -13px;
+      background: #252525;;
+    }
+  }
+  &__list-link {
+    font-size: 13px;
+    line-height: 1;
+    color: #555555;
+    text-decoration: none;
+    display: block;
+    @include transition((color));
+    & span {
+      @include transition((color));
+      color: #959595;
+    }
+    &:hover {
+      color: lighten(#555, 30%);
+    }
+    &:hover span {
+      color: lighten(#555, 50%);
+    }
+    &:active {
+      @include transition((none));
+      color: #ded73b;
+    }
+    &:active span {
+      @include transition((none));
+      color: #f9f038;
+    }
+  }
+}
