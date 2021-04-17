@@ -28,6 +28,13 @@ $(document).ready(function() {
     $('.main-nav').css('top', headerHeight + 1 + 'px')
   }
 
+  // Video play ****************************************************************
+
+  $('.video__play').click(function() {
+    let video = $(this).parents('.video').find('.video__data').get(0)
+    $(video).trigger( $(video).prop('paused') ? 'play' : 'pause')
+  })
+
   // Arrow in nav **************************************************************
 
   let mainNavItems = $('.nav__item')

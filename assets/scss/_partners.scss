@@ -5,6 +5,12 @@
     @include flex-default-center(space-between, center);
     flex-wrap: wrap;
     background: #ccc url(../img/partners_bg.jpg) no-repeat center/cover;
+    &__link {
+      @include transition((filter));
+      &:hover {
+        filter: brightness(70%);
+      }
+    }
     &__img {
       padding: 15px;
       @include box-sizing();

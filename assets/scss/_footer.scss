@@ -54,54 +54,54 @@
       }
     }
   }
-}
-.posts {
-  flex: 0 1 258px;
-  &__title {
-    font-family: 'raleway-bold';
-    font-size: 24px;
-    line-height: 1.2;
-    color: #fff;
-    margin: 0 0 33px 0;
-    text-transform: capitalize;
-    display: block;
-  }
-  &__item {
-    margin: 0 0 19px 0;
-    padding: 0 0 21px 0;
-    border-bottom: 1px solid #252525;
-    text-decoration: none;
-    display: block;
-    &:last-child {
-      margin: 0;
-      border-bottom: none;
-    }
-    &:hover .posts__date{
+  &__posts {
+    flex: 0 1 258px;
+    &-title {
+      font-family: 'raleway-bold';
+      font-size: 24px;
+      line-height: 1.2;
       color: #fff;
+      margin: 0 0 33px 0;
+      text-transform: capitalize;
+      display: block;
     }
-    &:hover .posts__par{
-      color: #c7b299;
+    &-item {
+      margin: 0 0 19px 0;
+      padding: 0 0 21px 0;
+      border-bottom: 1px solid #252525;
+      text-decoration: none;
+      display: block;
+      &:last-child {
+        margin: 0;
+        border-bottom: none;
+      }
+      &:hover .posts-date{
+        color: #fff;
+      }
+      &:hover .posts-par{
+        color: #c7b299;
+      }
+      &:active .posts-date {
+        color: #ccc;
+        @include transition((none));
+      }
+      &:active .posts-par {
+        color: #f9f038;
+        @include transition((none));
+      }
     }
-    &:active .posts__date {
-      color: #ccc;
-      @include transition((none));
+    &-date {
+      font-size: 12px;
+      line-height: 20px;
+      color: #363636;
+      @include transition((color));
     }
-    &:active .posts__par {
-      color: #f9f038;
-      @include transition((none));
+    &-par {
+      font-size: 14px;
+      line-height: 20px;
+      color: #555;
+      @include transition((color));
     }
-  }
-  &__date {
-    font-size: 12px;
-    line-height: 20px;
-    color: #363636;
-    @include transition((color));
-  }
-  &__par {
-    font-size: 14px;
-    line-height: 20px;
-    color: #555;
-    @include transition((color));
   }
 }
 .twitter {
