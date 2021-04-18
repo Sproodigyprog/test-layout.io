@@ -2,7 +2,7 @@
 
 .footer {
   &__data {
-    padding: 94px calc(50% - (#{$container-full-width} / 2 + #{$container-padding})) 81px;
+    padding: 94px calc(50% - #{$container-full-width} / 2) 81px;
     background: #191919;
     border-bottom: 1px solid #555;
     @include flex-default-center(space-between, flex-start);
@@ -103,6 +103,11 @@
       @include transition((color));
     }
   }
+  @media (max-width: 1023.98px) {
+    &__data {
+      display: none;
+    }
+  }
 }
 .twitter {
   flex: 0 1 267px;
@@ -182,13 +187,21 @@
 }
 
 .add-nav {
-  background-color: #111111;
-  padding: 45px  calc(50% - (#{$container-full-width} / 2 + #{$container-padding})) 52px;
+  background-color: #111;
+  padding: 45px  calc(50% - #{$container-full-width} / 2) 52px;
   @include flex-default-center(space-between, center);
+  @include box-sizing();
   &__list {
     @include flex-default-center();
+    @include box-sizing();
     list-style: none;
     padding: 0;
+    &:first-child {
+      padding: 0 0 0 15px;
+    }
+    &:last-child {
+      padding: 0 15px 0 0;
+    }
   }
   &__list-item {
     position: relative;
@@ -234,6 +247,38 @@
     &:active span {
       @include transition((none));
       color: #f9f038;
+    }
+  }
+  @media (max-width: 991.98px) {
+    @include flex-dir-col();
+    align-items: center;
+    padding: 20px 15px;
+    &__list {
+      &:first-child {
+        padding: 0;
+        margin: 0 0 40px 0;
+      }
+      &:last-child {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  @media (max-width: 479.98px) {
+    width: 100%;
+    align-items: flex-start;
+    &__list {
+      @include flex-dir-col();
+      align-items: flex-start;
+    }
+    &__list-item {
+      margin: 0 0 25px 0;
+      &::after {
+        content: none;
+      }
+    }
+    &__list-link {
+      font-size: 16px;
     }
   }
 }

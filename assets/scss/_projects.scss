@@ -1,7 +1,7 @@
 // main: style.scss
 
 .projects {
-  padding: 80px calc(50% - (#{$container-full-width} / 2 + #{$container-padding}));
+  padding: 80px calc(50% - #{$container-full-width} / 2);
   @include flex-default-center();
   flex-wrap: wrap;
   &__title {
@@ -31,6 +31,8 @@
     grid-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 0 40px 0;
+    padding: 0 15px;
+    @include box-sizing();
   }
   &__item {
     position: relative;
@@ -119,6 +121,36 @@
       border: 1px solid #ded73b;
       background: darken(#ded73b, 80%);
       color: #ded73b;
+    }
+  }
+  @media (max-width: 767.98px) {
+    &__gallery {
+      grid-template-columns: auto;
+      grid-gap: 30px 0;
+      width: 100%;
+    }
+    &__item {
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 639.98px) {
+    padding: 20px 0;
+    &__nav {
+      width: 100%;
+    }
+    &__nav-btn {
+      width: 60%;
+      margin: 0 auto;
+      display: block;
+      margin: 0 auto 10px auto;
+      &:last-child {
+        margin: 0 auto;
+      }
+    }
+  }
+  @media (max-width: 399.98px) {
+    &__nav-btn {
+      width: 90%;
     }
   }
 }

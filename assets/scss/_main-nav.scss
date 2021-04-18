@@ -3,12 +3,12 @@
 .nav {
   position: relative;
   z-index: 1000;
+  margin: 0 63px 0 0;
   &__list {
     @include flexbox();
     @include box-sizing();
     list-style: none;
     padding: 0;
-    margin: 0 63px 0 0;
   }
   &__item {
     margin: 0 30px 0 0;
@@ -104,28 +104,38 @@
   @media screen and (max-width: 767.98px) {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     @include transition(transform);
     transform: translateY(-100%);
-    // width: 100%;
     &_active {
       transform: translateY(0);
     }
     &__list {
       display: flex;
       @include flex-dir-col();
+      justify-content: center;
       @include box-sizing();
       padding: 10px;
-      background: lightblue;
+      background: #1C3950;
+      height: inherit;
     }
     &__item {
       justify-content: flex-start;
       flex-wrap: wrap;
-      text-align: left;
+      text-align: center;
       padding: 5px 0;
+      margin: 0 0 10px 0;
+      &:last-child {
+        margin: 0;
+      }
       &_parent {
         padding: 0;
       }
+    }
+    &__link {
+      font-size: 22px;
     }
     &__sublist {
       position: relative;
@@ -163,12 +173,14 @@
     transition: transform .3s;
     width: 100%;
     height: 2px;
-    background: #333;
+    background: #fff;
+    @include transition((background-color, transform));
   }
   &:hover .burger__item {
-    background: #666;
+    background: #c7b299;
   }
   &_active .burger__item {
+    background: #ded73b;
     position: absolute;
     &:nth-of-type(1) {
       transform: rotate(45deg);
@@ -182,8 +194,7 @@
       top: 11px;
     }
   }
-
-  @media screen and (max-width: 767.98px) {
+  @media (max-width: 767.98px) {
     @include flex-default-center(space-between, center, column);
   }
 }

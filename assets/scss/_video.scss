@@ -59,6 +59,7 @@
     font-family: raleway-medium;
     font-size: 30px;
     line-height: 1.2;
+    text-transform: capitalize;
   }
   &__par {
     margin: 0 0 40px 0;
@@ -70,5 +71,8 @@
     font-size: 14px;
     line-height: 24px;
     color: #c7b299;
+  }
+  @media (max-width: 575.98px) {
+    display: none;
   }
 }

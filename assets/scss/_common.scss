@@ -33,6 +33,9 @@ body {
 .container-2 {
   padding: 0 calc(50% - (#{$container-full-width} / 2 + #{$container-padding}));
 }
+.no-overflow {
+  overflow: hidden;
+}
 .marked-00bff3 {
   color: #00bff3;
 }

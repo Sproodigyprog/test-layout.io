@@ -1,7 +1,7 @@
 // main: style.scss
 
 .purchase {
-  padding: 49px calc(50% - (#{$container-full-width} / 2 + #{$container-padding}));
+  padding: 49px calc(50% - #{$container-full-width} / 2);
   @include flex-default-center(space-between, center);
   background-color: #f4f5f8;
   background-image: -webkit-linear-gradient(bottom, #211b19 0%, #4e3427 100%);
@@ -26,5 +26,22 @@
     color: #615855;
   }
   &__btn {
+  }
+  @media (max-width: 1199.98px) {
+    &__descr {
+      margin: 0 0 0 15px;
+    }
+    &__btn {
+      margin: 0 15px 0 0;
+    }
+  }
+  @media (max-width: 767.98px) {
+    flex-wrap: wrap;
+    @include flex-dir-col();
+    align-items: center;
+    &__descr {
+      text-align: center;
+      margin: 0 0 30px 0;
+    }
   }
 }

@@ -9,6 +9,15 @@
   @include flex-default-center();
   align-content: space-between;
   flex-wrap: wrap;
+  @media (max-width: 1023.98px) {
+    padding: 20px 80px;
+  }
+  @media (max-width: 767.98px) {
+    padding: 20px;
+    .carousel, .carousel-pagination {
+      display: none;
+    }
+  }
 }
 .logo-link {
   @include flex-default-center(space-between, center);
@@ -37,6 +46,17 @@
     font-family: raleway, sans-serif;
     font-size: 34px;
     line-height: 1.2;
+    text-transform: capitalize;
+  }
+  @media (max-width: 1499.98px) {
+    margin: 0 10px 0 0;
+    width: auto;
+    &__txt {
+      display: none;
+    }
+  }
+  @media (max-width: 1023.98px) {
+
   }
 }
 .cart {
@@ -190,6 +210,11 @@
       background: transparent;
       border: 2px solid #d3c1ad;
     }
+  }
+  @media (max-width: 1499.98px) {
+    // .logo-link {
+    // 	margin: 0 10px 0 0;
+    // }
   }
 }
 

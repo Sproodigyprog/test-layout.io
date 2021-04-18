@@ -4,6 +4,9 @@
   @include flex-default-center();
   padding: 80px calc(50% - (#{$container-full-width} / 2 + #{$container-padding})) 110px;
   margin: 0 -17px;
+  @media (max-width: 1199.98px) {
+    flex-wrap: wrap;
+  }
 }
 .icon-block {
   position: relative;
@@ -49,5 +52,11 @@
     text-align: center;
     font-size: 14px;
     color: #8c8c8c;
+  }
+  @media (max-width: 1199.98px) {
+    margin: 0 0 50px 0;
+    &__par {
+      max-width: 300px;
+    }
   }
 }

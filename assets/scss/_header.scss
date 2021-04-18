@@ -1,8 +1,26 @@
 // main: style.scss
 
 .header {
-  // @include box-sizing();
+  @include box-sizing();
   @include flex-default-center();
-  // margin: 0 0 285px 0;
-  // padding: 0 $container-padding;
+  width: 100%;
+  z-index: 100;
+  &__actions {
+    @include flex-default-center();
+  }
+  @media (max-width: 1499.98px) {
+    justify-content: space-between;
+    &__nav {
+      margin: 0 10px 0 0;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    @include box-sizing();
+    background: rgba(#000000, 0.8)
+  }
 }

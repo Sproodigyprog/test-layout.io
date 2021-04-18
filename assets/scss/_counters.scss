@@ -38,50 +38,15 @@
     text-transform: uppercase;
     color: #c7b299;
   }
-}
-.icon-block {
-  position: relative;
-  margin: 0 17px;
-  padding: 0 5px;
-  @include box-sizing();
-  @include flex-default-center(flex-start, center, column);
-  &::after {
-    position: absolute;
-    content: '';
-    display: block;
-    bottom: -30px;
-    width: 70px;
-    height: 3px;
-    background: #f1eee9;
-    @include transition((background-color));
-  }
-  &:hover &__title {
-    color: #c7b299;
-  }
-  &:hover &__icon {
-    fill: #c7b299;
-  }
-  &:hover::after {
-    background: #c7b299;
-  }
-  &__icon {
-    @include transition((fill));
-    margin: 0 0 29px 0;
-    fill: #555;
-    height: 49px;
-  }
-  &__title {
-    @include transition((color));
-    display: block;
-    font-family: raleway-semibold;
-    font-size: 22px;
-    line-height: 1.2;
-    color: #555555;
-    margin: 0 0 19px 0;
-  }
-  &__par {
-    text-align: center;
-    font-size: 14px;
-    color: #8c8c8c;
+  @media (max-width: 767.98px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    &__item {
+      margin: 0 10px 50px;
+      width: 100%;
+      &:last-child {
+        margin: 0;
+      }
+    }
   }
 }

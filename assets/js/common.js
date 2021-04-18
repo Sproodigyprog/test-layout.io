@@ -62,7 +62,7 @@ $(document).ready(function() {
 
   $('.burger').click(function() {
     $(this).toggleClass('burger_active')
-    // $('body').toggleClass('no-overflow')
+    $('body').toggleClass('no-overflow')
     $('.nav').toggleClass('nav_active')
     // $('.nav').slideToggle(300)
   })
