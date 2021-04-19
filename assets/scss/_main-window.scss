@@ -107,7 +107,8 @@
       display: block;
       opacity: 1;
       width: 200px;
-      border: 1px solid #fff;
+      height: 30px;
+      outline: 1px solid #171e44;
       & ~ .search-form__label > .search-form__icon {
         fill: #ded73b;
       }
