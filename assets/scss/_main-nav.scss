@@ -107,10 +107,12 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    @include transition(transform);
+    @include transition((transform, visibility));
     transform: translateY(-100%);
+    visibility: hidden;
     &_active {
       transform: translateY(0);
+      visibility: visible;
     }
     &__list {
       display: flex;

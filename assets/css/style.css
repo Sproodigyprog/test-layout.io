@@ -675,14 +675,16 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    -webkit-transition: transform 0.3s ease;
-    -moz-transition: transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease, visibility 0.3s ease;
+    -moz-transition: transform 0.3s ease, visibility 0.3s ease;
+    -o-transition: transform 0.3s ease, visibility 0.3s ease;
+    transition: transform 0.3s ease, visibility 0.3s ease;
     transform: translateY(-100%);
+    visibility: hidden;
   }
   .nav_active {
     transform: translateY(0);
+    visibility: visible;
   }
   .nav__list {
     display: flex;
