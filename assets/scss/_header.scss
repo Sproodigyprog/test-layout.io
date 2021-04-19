@@ -5,6 +5,15 @@
   @include flex-default-center();
   width: 100%;
   z-index: 100;
+  &_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+    @include box-sizing();
+    background: rgba(#000000, 0.8)
+  }
   &__actions {
     @include flex-default-center();
   }
@@ -13,14 +22,5 @@
     &__nav {
       margin: 0 10px 0 0;
     }
-  }
-  @media screen and (max-width: 767.98px) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    @include box-sizing();
-    background: rgba(#000000, 0.8)
   }
 }

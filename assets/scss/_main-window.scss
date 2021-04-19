@@ -9,11 +9,10 @@
   @include flex-default-center();
   align-content: space-between;
   flex-wrap: wrap;
-  @media (max-width: 1023.98px) {
-    padding: 20px 80px;
+  @media (max-width: 1122.98px) {
+    padding: 20px 30px;
   }
   @media (max-width: 767.98px) {
-    padding: 20px;
     .carousel, .carousel-pagination {
       display: none;
     }
@@ -54,9 +53,6 @@
     &__txt {
       display: none;
     }
-  }
-  @media (max-width: 1023.98px) {
-
   }
 }
 .cart {
@@ -114,6 +110,16 @@
       border: 1px solid #fff;
       & ~ .search-form__label > .search-form__icon {
         fill: #ded73b;
+      }
+    }
+  }
+  @media (max-width: 991.98px) {
+    &__search {
+      position: fixed;
+      top: 95px;
+      left: 5%;
+      &:focus {
+        width: 90%;
       }
     }
   }
@@ -182,6 +188,21 @@
     margin: 0 0 52px 0;
   }
   &__start {
+  }
+  @media (max-width: 992.98px) {
+    &__body {
+      text-align: center;
+      max-width: 518px;
+    }
+    &__text {
+      font-size: 28px;
+    }
+    &__title {
+      font-size: 42px;
+    }
+    &__par {
+      font-size: 14px;
+    }
   }
 }
 .carousel-pagination {

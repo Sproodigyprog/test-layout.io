@@ -79,12 +79,12 @@
       display: none;
       @include transition((filter));
       &_link {
-        left: 144px;
+        left: 39%;
         background: url(../img/icons/icon-chain-cell.png) no-repeat center/contain;
       }
       &_search {
         background: url(../img/icons/icon_lupa.png) no-repeat center/contain;
-        right: 144px;
+        right: 39%;
       }
       &:hover {
         filter: brightness(70%);
@@ -110,7 +110,7 @@
       display: block;
     }
   }
-  &__btn {
+  &-btn {
     @include transition((color, background-color));
     &:hover {
       color: #998675;
@@ -121,6 +121,19 @@
       border: 1px solid #ded73b;
       background: darken(#ded73b, 80%);
       color: #ded73b;
+    }
+  }
+  @media (max-width: 992.98px) {
+    &__item {
+      &-btn {
+        top: 25%; 
+        &_link {
+          left: 30%;
+        }
+        &_search {
+          right: 30%;
+        }
+      }
     }
   }
   @media (max-width: 767.98px) {

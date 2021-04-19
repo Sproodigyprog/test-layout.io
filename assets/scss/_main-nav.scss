@@ -101,7 +101,7 @@
       color: lighten(#000, 40%);
     }
   }
-  @media screen and (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
     position: fixed;
     top: 0;
     left: 0;
@@ -118,7 +118,7 @@
       justify-content: center;
       @include box-sizing();
       padding: 10px;
-      background: #1C3950;
+      background: #17222B;
       height: inherit;
     }
     &__item {
@@ -126,7 +126,7 @@
       flex-wrap: wrap;
       text-align: center;
       padding: 5px 0;
-      margin: 0 0 10px 0;
+      margin: 0 0 20px 0;
       &:last-child {
         margin: 0;
       }
@@ -194,7 +194,7 @@
       top: 11px;
     }
   }
-  @media (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
     @include flex-default-center(space-between, center, column);
   }
 }

@@ -1,19 +1,21 @@
 // main: style.scss
 
 .mobile {
-  background: #fbfaf8 url(../img/iphone_in_hand.png) no-repeat 423px bottom/423px 616px;
-  padding: 79px calc(50% - (#{$container-full-width} / 2 + #{$container-padding})) 183px;
-  @include flex-default-center(flex-end, flex-start);
+  padding: 79px 15px 0;
+  @include flex-default-center();
+  &__img {
+    align-self: flex-end;
+  }
   &__descr {
-    padding: 115px 0 0 0;
+    max-width: 1110px;
     @include flex-item(0, 1, 660px);
   }
   &__title {
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
   }
   &__par {
     color: #8c8c8c;
-    margin: 0 0 45px 0;
+    margin: 0 0 35px 0;
   }
   &__list {
     line-height: 32px;
@@ -40,7 +42,22 @@
       text-align: center;
     }
   }
-  @media (max-width: 1599.98px) {
-    // background-size: contain;
+  @media (max-width: 991.98px) {
+    &__img {
+      width: 300px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    padding: 20px 15px;
+    background: #fbfaf8;
+    &__img {
+      display: none;
+    }
+    &__list-item {
+      padding: 0 0 0 40px;
+      &::before {
+        left: 0;
+      }
+    }
   }
 }
