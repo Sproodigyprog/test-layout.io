@@ -2,10 +2,11 @@
 
 .features {
   @include flex-default-center();
-  padding: 80px calc(50% - (#{$container-full-width} / 2 + #{$container-padding})) 110px;
+  padding: 80px calc(50% - #{$container-full-width} / 2) 110px;
   margin: 0 -17px;
   @media (max-width: 1199.98px) {
     flex-wrap: wrap;
+    margin: 0; 
   }
 }
 .icon-block {

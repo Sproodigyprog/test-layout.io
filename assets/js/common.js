@@ -9,8 +9,8 @@ $(document).ready(function() {
   // Actions on the header *****************************************************
 
   $(window).scroll(function() {
-    // if ($(window).scrollTop() > 0) $('.header').addClass('header_fixed')
-    // else $('.header').removeClass('header_fixed')
+    if ($(window).scrollTop() > 0) $('.header').addClass('header_fixed')
+    else $('.header').removeClass('header_fixed')
   })
 
   // Replace header__info ******************************************************

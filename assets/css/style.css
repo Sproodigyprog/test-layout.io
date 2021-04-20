@@ -1280,13 +1280,14 @@ body {
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   flex-direction: row;
-  padding: 80px calc(50% - (1200px / 2 + 15px)) 110px;
+  padding: 80px calc(50% - 1200px / 2) 110px;
   margin: 0 -17px;
 }
 
 @media (max-width: 1199.98px) {
   .features {
     flex-wrap: wrap;
+    margin: 0;
   }
 }
 
