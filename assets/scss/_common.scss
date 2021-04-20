@@ -22,8 +22,8 @@ body {
   // @include flex-dir-col();
 
   // Footer always at the bottom on "grids"
-  // display: grid;
-  // grid-template-rows: auto 1fr auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 .container {
   margin: auto;
