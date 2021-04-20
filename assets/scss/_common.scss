@@ -11,7 +11,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   text-rendering: optimizeSpeed;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   color: #fff;
 }
 .wrapper {
@@ -22,8 +22,8 @@ body {
   // @include flex-dir-col();
 
   // Footer always at the bottom on "grids"
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  // display: grid;
+  // grid-template-rows: auto 1fr auto;
 }
 .container {
   margin: auto;
@@ -32,6 +32,7 @@ body {
 }
 .container-2 {
   padding: 0 calc(50% - (#{$container-full-width} / 2 + #{$container-padding}));
+  box-sizing: border-box;
 }
 .no-overflow {
   overflow: hidden;

@@ -9,24 +9,24 @@ $(document).ready(function() {
   // Actions on the header *****************************************************
 
   $(window).scroll(function() {
-    if ($(window).scrollTop() > 0) $('.header').addClass('header_fixed')
-    else $('.header').removeClass('header_fixed')
+    // if ($(window).scrollTop() > 0) $('.header').addClass('header_fixed')
+    // else $('.header').removeClass('header_fixed')
   })
 
   // Replace header__info ******************************************************
 
-  if ($(window).width() < 1150) {
-    $('.header__info').insertAfter($('.header__actions'))
-  }
+  // if ($(window).width() < 1150) {
+  //   $('.header__info').insertAfter($('.header__actions'))
+  // }
 
   // Main nav top position *****************************************************
 
-  if ($(window).width() < 991.98) {
-    $('.header__nav-wrp').insertAfter($('.cart-wrp'))
-
-    headerHeight = $('.header').innerHeight()
-    $('.main-nav').css('top', headerHeight + 1 + 'px')
-  }
+  // if ($(window).width() < 991.98) {
+  //   $('.header__nav-wrp').insertAfter($('.cart-wrp'))
+  //
+  //   headerHeight = $('.header').innerHeight()
+  //   $('.main-nav').css('top', headerHeight + 1 + 'px')
+  // }
 
   // Video play ****************************************************************
 
