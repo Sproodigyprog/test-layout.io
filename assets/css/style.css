@@ -1632,19 +1632,19 @@ body {
   display: block;
 }
 
-.projects-btn {
+.projects__btn {
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -o-transition: color 0.3s ease, background-color 0.3s ease;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.projects-btn:hover {
+.projects__btn:hover {
   color: #998675;
   border: 1px solid #998675;
 }
 
-.projects-btn:active {
+.projects__btn:active {
   -webkit-transition: none 0.3s ease;
   -moz-transition: none 0.3s ease;
   -o-transition: none 0.3s ease;
