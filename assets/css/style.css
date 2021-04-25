@@ -2303,6 +2303,11 @@ body {
 
 .footer__about-logo {
   margin: 0 0 29px 0;
+  justify-content: flex-start;
+}
+
+.footer__about-logo .logo-link__txt {
+  display: block;
 }
 
 .footer__about-par {
